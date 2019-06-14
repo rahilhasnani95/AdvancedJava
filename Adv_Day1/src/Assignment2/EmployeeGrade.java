@@ -39,8 +39,10 @@ public class EmployeeGrade {
 		}
 		for(int i = 0; i < employeeNo.length; i++)
 		{
-			System.out.print("\t" +averageFeedback[i]);
-			System.out.println("\t" + grade[i]);
+			System.out.print("Employee No : " + employeeNo[i]);
+			System.out.print("  Average Feedback : " +averageFeedback[i]);
+			System.out.print("  Grade : " + grade[i]);
+			System.out.println();
 		}
 
 
