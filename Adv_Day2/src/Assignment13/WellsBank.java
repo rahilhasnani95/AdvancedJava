@@ -18,23 +18,28 @@ public class WellsBank {
 		System.out.println();System.out.println("****Current Account****");
 		
 		Customer jenny = new Customer(2, "Jenny", "Dallas", 77000);
-		CurrentAccount jennyCA = new CurrentAccount(201, jenny, 500, 2000);
+		CurrentAccount jennyCA = new CurrentAccount(201, jenny, 500, 3000);
 		
 		jennyCA.deposit(1500);
 		System.out.println(jennyCA.balanceEnquiry());
 		
-		jennyCA.withdraw(1000);
-		System.out.println(jennyCA.balanceEnquiry());
-
 		jennyCA.withdraw(4000);
 		System.out.println(jennyCA.balanceEnquiry());
-		System.out.println();
-		
-		jennyCA.withdraw(3000);
+		System.out.println(jennyCA.getEligibilityAmount());
+
+
+		jennyCA.withdraw(2000);
 		System.out.println(jennyCA.balanceEnquiry());
-		System.out.println(jennyCA.getCurrentAmount());
-		
-		
+		System.out.println(jennyCA.getEligibilityAmount());
+
+		/*
+		 * jennyCA.withdraw(1900); System.out.println(jennyCA.balanceEnquiry());
+		 * System.out.println(jennyCA.getEligibilityAmount());
+		 * 
+		 * jennyCA.withdraw(200); System.out.println(jennyCA.balanceEnquiry());
+		 * System.out.println(jennyCA.getEligibilityAmount());
+		 */
+
 	}
 
 }

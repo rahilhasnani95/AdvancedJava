@@ -1,4 +1,5 @@
-package Assignment15;
+package com.Wellsbank.account;
+import com.Wellsbank.customer.*;
 
 public class CurrentAccount extends Account {
 
@@ -13,7 +14,7 @@ public class CurrentAccount extends Account {
 		super(accountNo, customer, balance);
 		this.currentAmount = currentAmount;
 	}
-	
+
 	public void withdraw(double amount)
 	{
 		if(amount < balance)
@@ -36,6 +37,8 @@ public class CurrentAccount extends Account {
 	{
 		 return -currentAmount;
 	}
+	
+
 	
 	
 }

@@ -13,54 +13,27 @@ public class CurrentAccount extends Account {
 		super(accountNo, customer, balance);
 		this.currentAmount = currentAmount;
 	}
-	@Override
-	public double balanceEnquiry()
-	{
-		System.out.print("Balance in account is " );
-		return (Math.abs(balance) + Math.abs(currentAmount));
-	}
-
 	public void withdraw(double amount)
 	{
-
-		if(amount <= (Math.abs(balance) + Math.abs(currentAmount)))
+		if(amount < balance)
 		{
-			if(amount < balance)
-			{
-				currentAmount = currentAmount;
-				
-			}
-			else
-			{
-				currentAmount = amount - (Math.abs(balance) + Math.abs(currentAmount));
-			}
-			if(amount >= balance)
-			{
-				balance = 0;
-				System.out.println("Amount withdrawn: " + amount);
-			}
-			else
-				{
-				balance = balance - amount;
-				System.out.println("Amount withdrawn: " + amount);
-				}
+			balance = balance - amount;
+		}
+		else if((balance - amount) >= - currentAmount)
+		{
+			balance = balance - amount;
+			currentAmount = currentAmount + balance;
+			balance=0;
 		}
 		else
 		{
-			System.out.println("Insuffucient Balance");
+			System.out.println("Insuffiecient funds left");
 		}
+		
 	}
 	public double getEligibilityAmount()
 	{
-		return Math.abs(currentAmount);
-	}
-	
-	
-	
-	
-	
-	public double getCurrentAmount() {
-		return currentAmount;
+		 return -currentAmount;
 	}
 	
 	

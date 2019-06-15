@@ -1,4 +1,5 @@
-package Assignment13;
+package com.Wellsbank.customer;
+
 public class Customer {
 
 	private int customerId;
