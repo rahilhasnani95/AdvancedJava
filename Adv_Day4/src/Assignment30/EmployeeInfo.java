@@ -1,7 +1,8 @@
 package Assignment30;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -15,12 +16,21 @@ public class EmployeeInfo {
 		 * Employee(2, "Ajay", new Date("16 April 1985"))); list.add(new Employee(3,
 		 * "Rahul", new Date("2 Jan 1990")));
 		 */
+		
+		/*
+		 * SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd"); Calendar calendar
+		 * = new GregorianCalendar(2013,0,31);
+		 * System.out.println(sdf.format(calendar.getTime()));
+		 */
+		
 		Employee emp1 = new Employee();
 		Employee emp2 = new Employee();
-		emp1.employeeID = 1;
-		emp2.employeeID = 2;
-		emp1.employeeName = "Rahil";
-		emp2.employeeName = "Ajay";
+		emp1.setEmployeeID(1001);
+		emp2.setEmployeeID(1002);
+		emp1.setEmployeeName("Rahil");
+		emp2.setEmployeeName("Ajay");
+		emp1.setDateOfBirth(new GregorianCalendar(1995,6,3));
+		
 		
 		List list = new ArrayList(); 
 		list.add(emp1);

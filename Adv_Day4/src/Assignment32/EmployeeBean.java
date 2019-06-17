@@ -4,9 +4,9 @@ import java.util.Calendar;
 
 public class EmployeeBean {
 
-	int employeeId;
-	String employeeName;
-	Calendar dateOfBirth;
+	private int employeeId;
+	private String employeeName;
+	private Calendar dateOfBirth;
 	
 	public EmployeeBean() {
 		super();
