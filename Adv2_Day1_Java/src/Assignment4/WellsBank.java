@@ -5,9 +5,9 @@ import java.util.Set;
 
 public class WellsBank {
 
-	private static final CustomerDB customerDB = new CustomerDB();
+	private static CustomerDB customerDB = new CustomerDB();
 	
-	private static final Login login = new Login();
+	private static Login login = new Login();
 	
 	public static void main(String[] args) {
 	
@@ -57,8 +57,8 @@ public class WellsBank {
 		String loanavailed;
 		for(Customer c : customersList)
 		{
-			System.out.print(c.getCustomerId() + "\t");
-			System.out.print(c.getCustomerName() + "\t");
+			System.out.print(c.getCustomerId() + "\t\t");
+			System.out.print(c.getCustomerName() + "\t\t");
 			
 			if(c.isLoanAvailed()== true)
 			{

@@ -32,7 +32,7 @@ public class Debug {
 		set.add("Lourie");
 		
 		Debug debug = new Debug();
-		System.out.println("Printing the recored....");
+		System.out.println("Printing the record....");
 		debug.showRecords(set);
 
 	}
