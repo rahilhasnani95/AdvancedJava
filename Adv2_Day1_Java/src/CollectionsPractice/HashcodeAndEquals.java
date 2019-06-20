@@ -1,81 +1,84 @@
 package CollectionsPractice;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 class Employee
 {
 	int id;
+
 	public Employee(int id) 
 	{
 		this.id = id;
 	}
+	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
+	
 	@Override
-	public String toString() {
-		return "Employee [id=" + id + "]";
-	}
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + id;
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
+	public boolean equals(Object emp) {
+		if(this == emp) {
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Employee other = (Employee) obj;
-		if (id != other.id)
-			return false;
-		return true;
+		}
+		
+		Employee empObj = ((Employee) emp);
+		
+		if(this.id == empObj.id) return true;
+		
+		return false;
 	}
+
+	
+	
+	  @Override public int hashCode() 
+	  {
+		  Integer i = new Integer(this.id); 
+		  return i.hashCode(); 
+		}
+	 
+	  
+	 
+//	@Override
+//	public int hashCode() {
+//		Integer i = new Integer(this.id);
+//		// TODO Auto-generated method stub
+//		return i.hashCode()	 + this.name.hashCode();
+//	}
+	
+	
+	
+	
 	
 }
-
-public class HashcodeAndEquals {
-
+public class HashcodeAndEquals
+{
 	public static void main(String[] args) {
-		Employee emp1 = new Employee(1);
-		Employee emp2 = new Employee(1);
+		Set<Employee> empSet = new HashSet<>();
 		
-		Map<Employee, String> map = new HashMap<Employee, String>();
-		map.put(emp1, "one");
-		map.put(emp2, "one");
+		Employee emp1  = new Employee(199);
+		Employee emp2  = new Employee(199);
 		
-		System.out.println(map.size());
-
-		Integer i = new Integer(1);
-		Integer i1 = new Integer(20/20);
+	
 		
+		empSet.add(emp1);
+		empSet.add(emp2);
 		
-		Map<Integer, String> map2 = new HashMap<Integer, String>();
-		map2.put(i, "one");
-		map2.put(i1, "onvhe");
+		for(Employee e: empSet) System.out.println(e.id);
 		
-		System.out.println(map2.size());
-
-		Float f = new Float(1);
-		Float f1 = new Float(20/20);
+		System.out.println(emp1.equals(emp2));
 		
+		System.out.println(emp1.hashCode());
+		System.out.println(emp2.hashCode());
+	
 		
-		Map<Float, String> map3 = new HashMap<Float, String>();
-		map3.put(f, "one");
-		map3.put(f1, "onvhe");
-		
-		System.out.println(map2.size());
-		
+		System.out.println(empSet.size());
 	}
-	
-	
 }
+
+
+	
+

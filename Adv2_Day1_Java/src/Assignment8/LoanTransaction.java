@@ -18,8 +18,8 @@ public class LoanTransaction extends Thread {
 		{
 			bankFund.checkFund(loanAmount);
 			
-		//Thread.sleep((long)(2000*Math.random()));
-			Thread.sleep(500);
+		Thread.sleep((long)(2000*Math.random()));
+			//Thread.sleep(500);
 		
 			double fundAvailable = bankFund.debitFund(loanAmount);
 			System.out.println(customerId + " The loan of amount " + loanAmount + " is disbursed. Please collect cash ");

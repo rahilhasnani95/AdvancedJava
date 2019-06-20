@@ -15,7 +15,7 @@ public class WithdrawTransaction extends Security implements Runnable{
 		this.amount = amount;
 	}
 
-	public synchronized double withdraw(Account account, double amount) throws InsufficientBalanceException
+	public double withdraw(Account account, double amount) throws InsufficientBalanceException
 	{
 		if(account.getBalance() >= amount)
 		{

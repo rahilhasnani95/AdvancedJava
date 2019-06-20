@@ -22,7 +22,7 @@ public class WellsBank {
 		
 		for(int i = 0; i < loantransactions.length; i++)
 		{
-			loantransactions[i] = new LoanTransaction(wellsBankFund, (1000 + i), 1000000);
+			loantransactions[i] = new LoanTransaction(wellsBankFund, (1000 + i), 250000);
 		}
 		
 		for(int i = 0; i < loantransactions.length; i++)

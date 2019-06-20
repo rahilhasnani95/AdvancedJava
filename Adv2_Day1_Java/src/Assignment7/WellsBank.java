@@ -11,12 +11,12 @@ public class WellsBank {
 		Account acc2 = new Account(2002, cust2, 10000);
 		
 		DepositTransaction depositthread = new DepositTransaction(9001, acc2, 5001, 4000);
-		
+
+		DepositTransaction depositthread2 = new DepositTransaction(9002, acc1, 5002, 7000);
+
 		depositthread.start();
 		
 		depositthread.join();
-		
-		DepositTransaction depositthread2 = new DepositTransaction(9002, acc1, 5002, 7000);
 		
 		depositthread2.start();
 	
@@ -26,13 +26,14 @@ public class WellsBank {
 		
 		Thread withdrawthread1 = new Thread(withdrawtransaction1);
 		
+		Runnable withdrawtransaction2 = new WithdrawTransaction(10002, acc1, cust1, 500);
+		
+		Thread withdrawthread2 = new Thread(withdrawtransaction2);
+		
 		withdrawthread1.start();
 		
 		withdrawthread1.join();
 		
-		Runnable withdrawtransaction2 = new WithdrawTransaction(10002, acc1, cust1, 500);
-		
-		Thread withdrawthread2 = new Thread(withdrawtransaction2);
 		
 		withdrawthread2.start();
 		
