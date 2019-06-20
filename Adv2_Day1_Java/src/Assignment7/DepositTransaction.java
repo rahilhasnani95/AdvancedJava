@@ -15,7 +15,7 @@ public class DepositTransaction extends Thread{
 		this.amount = amount;
 	}
 	
-	public void deposit(Account account, double amount)
+	public synchronized void deposit(Account account, double amount)
 	{
 		account.setBalance(account.getBalance() + amount);
 		System.out.println("Amount deposited : " + amount);
@@ -24,7 +24,7 @@ public class DepositTransaction extends Thread{
 	public void run()
 	{
 		deposit(account, amount);
-		
+
 		System.out.println("Transaction Id: " + transactionId + " transaction Completed!!! " + customerId + " thank you for depositing to the account " + account.getAccountNo());
 	}
 

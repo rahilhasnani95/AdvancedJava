@@ -16,13 +16,13 @@ public class WellsBank {
 
 		depositthread.start();
 		
-		depositthread.join();
+		//depositthread.join();
 		
 		depositthread2.start();
 	
-		depositthread2.join();
+		//depositthread2.join();
 		
-		Runnable withdrawtransaction1 = new WithdrawTransaction(10001, acc1, cust2, 5000);
+		Runnable withdrawtransaction1 = new WithdrawTransaction(10001, acc1, cust1, 500);
 		
 		Thread withdrawthread1 = new Thread(withdrawtransaction1);
 		
@@ -32,11 +32,11 @@ public class WellsBank {
 		
 		withdrawthread1.start();
 		
-		withdrawthread1.join();
+	//	withdrawthread1.join();
 		
 		
 		withdrawthread2.start();
 		
-		withdrawthread2.join();
+		//withdrawthread2.join();
 	}
 }
