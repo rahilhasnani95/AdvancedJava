@@ -9,22 +9,20 @@ public class EmployeeInfo {
 
 	public static void main(String[] args) {
 		
-	//	ArrayList<int> employeeId = new ArrayList<int>();
-
-		ArrayList<Integer> employeeId = new ArrayList<Integer>();
-
-		employeeId.add(1001);
-		employeeId.add(1002);
-	//	employeeId.add("1003");
-		
-		for(int count = 0; count < employeeId.size(); count++)
-		{
-			int x =  employeeId.get(count);
-			System.out.println(x);
-			//System.out.println(employeeId.get(count));
-		}
-		
-		
+	ArrayList<Integer> list = new ArrayList<Integer>();
+	
+	list.add(1001);
+	list.add(1002);
+	list.add(1003);
+	
+	for(int i = 0; i < list.size(); i++)
+	{
+		System.out.println(list.get(i));
+	}
+	
+	//list.forEach(System.out::println);
+	
+	//System.out.println(list);
 		
 		
 	}

@@ -29,21 +29,26 @@ public class WithdrawTransaction extends Security implements Runnable{
 	}
 
 	public void run() {
-		try {
-			authorization(account, customer);
-		
-			double balance = withdraw(account, amount);
-		
-			System.out.println(transactionId + " transaction completed!! and balance amount is : " + balance);
-		}
-		catch (UnAuthorizedWithdrawTransactionException un)
+		synchronized (account)
 		{
-			System.out.println(transactionId + " transaction failed!! " + un.getMessage());
+			try 
+			{
+				authorization(account, customer);
+			
+				double balance = withdraw(account, amount);
+			
+				System.out.println(transactionId + " transaction completed!! and balance amount is : " + balance);
+			}
+			catch (UnAuthorizedWithdrawTransactionException un)
+			{
+				System.out.println(transactionId + " transaction failed!! " + un.getMessage());
+			}
+			catch (InsufficientBalanceException in) 
+			{
+				System.out.println(transactionId + " transaction failed!! " + in.getMessage());
+			}
 		}
-		catch (InsufficientBalanceException in) 
-		{
-			System.out.println(transactionId + " transaction failed!! " + in.getMessage());
-		}
+		
 	}
 
 }

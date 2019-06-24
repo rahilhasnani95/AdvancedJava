@@ -22,7 +22,6 @@ public class WellsBank {
 		
 		System.out.println(jennyCA.balanceEnquiry());
 		System.out.println(jennyCA.getEligibilityAmount());
-
 	
 	}
 	

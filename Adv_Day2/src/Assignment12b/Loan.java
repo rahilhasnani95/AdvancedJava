@@ -15,7 +15,7 @@ public class Loan {
 		loanCounter++;
 	}
 	public Loan(int accountNo, int customerNo, float loanAmount, int loanDuration, float interest) {
-		super();
+		//super();
 		loanCounter++;
 		this.accountNo = accountNo;
 		this.customerNo = customerNo;

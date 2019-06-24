@@ -2,8 +2,8 @@ package Assignment8;
 
 public class InsufficientFundException extends Exception {
 
-	public InsufficientFundException(String msg)
+	public InsufficientFundException()
 	{
-		super(msg);
+		super();
 	}
 }

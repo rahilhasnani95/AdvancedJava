@@ -27,8 +27,16 @@ public class EmployeeGrade {
 	}
 	public void calculateAverageFeedback()
 	{
+		if(customer3Feedback == 0.0f)
+		{
+			averageFeedback = (customer1Feedback + customer2Feedback)/2.0f;	
+		}
+		else
+		{
 		averageFeedback = (customer1Feedback + customer2Feedback + customer3Feedback)/3.0f;
+		}
 	}
+		
 	public void calculateGrade()
 	{
 		if(averageFeedback > 4.5)

@@ -16,10 +16,11 @@ public class EntrySet {
 		  else
 		  {
 			  System.out.println("Set elements are : " + hashset);
+			hashset.forEach(System.out::println);
 		  }
 		 
 		
-		//hashset.forEach(System.out::println);
+		
 	}
 	
 	

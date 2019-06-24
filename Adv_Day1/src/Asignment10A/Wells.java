@@ -8,7 +8,7 @@ public class Wells {
 		emp.calculateAverageFeedback();
 		emp.calculateGrade();
 		emp.displayInfo();
-		
+
 	}
 
 }

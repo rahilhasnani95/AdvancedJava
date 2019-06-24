@@ -2,6 +2,7 @@ package Assignment1;
 
 public class Customer {
 
+	
 	private int customerId;
 	private String customerName;
 	private boolean loanAvailed;

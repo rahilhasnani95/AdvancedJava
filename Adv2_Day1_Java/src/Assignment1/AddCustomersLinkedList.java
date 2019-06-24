@@ -11,7 +11,7 @@ public class AddCustomersLinkedList {
 			 /* Iterator i = arrayList.iterator(); System.out.println("Customers are : ");
 			  while(i.hasNext()) { System.out.println(i.next()); }
 			 */
-			
+		
 			linkedList.forEach(System.out::println);
 		}
 
@@ -22,7 +22,8 @@ public class AddCustomersLinkedList {
 			list.add("Ajay");
 			list.addLast("Ram");
 			list.addLast("Akshay");
-			
+		
+
 			AddCustomersLinkedList ac = new AddCustomersLinkedList();
 			ac.printCustomers(list);
 		}

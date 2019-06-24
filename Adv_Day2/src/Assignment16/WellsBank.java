@@ -42,7 +42,6 @@ public class WellsBank {
 	  public static void transaction(Account account, double amount) 
 	  {  
 		  account.deposit(amount); 
-	
 	  }
 	 
 }

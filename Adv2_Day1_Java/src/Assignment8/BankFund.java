@@ -13,12 +13,12 @@ public class BankFund {
 	{
 		if(fund < amount)
 		{
-			throw new InsufficientFundException("Insufficient fund: " + fund);
+			throw new InsufficientFundException();
 		}
 		 return 0;
 	}
 	
-	public double debitFund(double amount)
+	public synchronized double debitFund(double amount)
 	{
 		fund = fund - amount;
 		return fund;

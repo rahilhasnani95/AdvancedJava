@@ -1,7 +1,8 @@
-package Assignment4;
+package Assignment2;
 
 public class Customer {
 
+	
 	private int customerId;
 	private String customerName;
 	private boolean loanAvailed;
@@ -15,6 +16,10 @@ public class Customer {
 	public Customer(int customerId, String customerName) {
 		this.customerId = customerId;
 		this.customerName = customerName;
+	}
+	public Customer()
+	{
+		
 	}
 	
 	public int getCustomerId() {
@@ -36,5 +41,4 @@ public class Customer {
 		this.loanAvailed = loanAvailed;
 	}
 	
-		
 }

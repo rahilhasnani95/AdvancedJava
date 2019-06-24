@@ -35,7 +35,7 @@ public class EmployeeInfo {
 		List list = new ArrayList(); 
 		list.add(emp1);
 		list.add(emp2);
-		
+
 		for(Object e : list)
 		{
 			System.out.println(e);

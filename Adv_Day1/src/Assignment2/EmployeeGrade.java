@@ -7,7 +7,7 @@ public class EmployeeGrade {
 	public static void main(String[] args) {
 	
 		int []employeeNo = {1,2,3,4,5};
-		float []customer1Feedback = {4.1f, 4.2f, 4.3f, 4.4f, 4.5f};
+		float []customer1Feedback = {4.5f, 4.2f, 4.3f, 4.4f, 4.5f};
 		float []customer2Feedback = {4,5,4,4.8f,4};
 		float []customer3Feedback = {5,5,4,3,5};
 		float[]averageFeedback = new float[employeeNo.length];
@@ -15,7 +15,7 @@ public class EmployeeGrade {
 		
 		for(int i = 0; i < employeeNo.length; i++)
 		{
-			averageFeedback[i] = (customer1Feedback[i] + customer2Feedback[2] + customer3Feedback[i])/3;
+			averageFeedback[i] = (customer1Feedback[i] + customer2Feedback[i] + customer3Feedback[i])/3;
 			//System.out.println(averageFeedback[i]);
 		}
 		for(int i = 0; i < averageFeedback.length; i++)

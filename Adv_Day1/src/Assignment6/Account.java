@@ -10,7 +10,7 @@ public class Account {
 		
 		//System.out.println(cust1.getAccountNumber());
 	//	System.out.println(cust1.getCustomerId());
-		Customer cust2 = new Customer("aul", "J", "Anderson", "Paul@Wellsfargo.com", "Salary", "3rd Jan, 1985", 'M', "Single");
+		Customer cust2 = new Customer("Rahil", "J", "Anderson", "Paul@Wellsfargo.com", "Salary", "3rd Jan, 1985", 'M', "Single");
 		System.out.println(cust2.toString());
 		
 		
