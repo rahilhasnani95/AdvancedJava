@@ -1,6 +1,8 @@
 package Assignment3;
 
-public class Account {
+import java.io.Serializable;
+
+public class Account implements Serializable {
 
 	private static int accountNo = 10;
 	private Customer customer;

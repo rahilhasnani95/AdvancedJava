@@ -1,6 +1,8 @@
 package Assignment2;
 
-public class Customer {
+import java.io.Serializable;
+
+public class Customer implements Serializable{
 
 	
 	private int customerId;
